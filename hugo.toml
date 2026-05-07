@@ -37,8 +37,6 @@ buildExpired = false
   # Site logo (top-left)
   [params.label]
     text = "lolcat++"
-    icon = "/cat.svg"
-    iconHeight = 28
 
   [params.profileMode]
     enabled = true
