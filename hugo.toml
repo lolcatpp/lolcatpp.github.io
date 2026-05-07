@@ -1,0 +1,92 @@
+baseURL = "https://lolcatpp.github.io/"
+title = "lolcat++"
+theme = "PaperMod"
+languageCode = "en-us"
+defaultContentLanguage = "en"
+
+# Don't paginate the home page (it's a single page anyway)
+paginate = 10
+
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+[minify]
+  disableXML = true
+  minifyOutput = true
+
+[params]
+  env = "production"
+  description = "A C++ port of lolcat --- concatenate and rainbow-colorize text. Faster than the Ruby original, available for Linux, macOS, and Windows."
+  author = "Love Billenius"
+
+  defaultTheme = "auto"
+  disableThemeToggle = true
+  ShowReadingTime = false
+  ShowShareButtons = false
+  ShowPostNavLinks = false
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = false
+  ShowToc = false
+  disableSpecial1stPost = true
+  disableScrollToTop = false
+  comments = false
+
+  # Site logo (top-left)
+  [params.label]
+    text = "lolcat++"
+    icon = "/cat.svg"
+    iconHeight = 28
+
+  [params.profileMode]
+    enabled = true
+    title = "lolcat++"
+    subtitle = "A fast C++ port of [lolcat](https://github.com/busyloop/lolcat). Why have slow init scripts when they can be fast?"
+    imageUrl = "/cat.svg"
+    imageWidth = 320
+    imageHeight = 194
+    imageTitle = "lolcat++"
+
+    [[params.profileMode.buttons]]
+      name = "Install"
+      url = "/install/"
+    [[params.profileMode.buttons]]
+      name = "Usage"
+      url = "/usage/"
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/lolcatpp/lolcatpp"
+
+[menu]
+  [[menu.main]]
+    identifier = "install"
+    name = "Install"
+    url = "/install/"
+    weight = 10
+  [[menu.main]]
+    identifier = "usage"
+    name = "Usage"
+    url = "/usage/"
+    weight = 20
+  [[menu.main]]
+    identifier = "github"
+    name = "GitHub"
+    url = "https://github.com/lolcatpp/lolcatpp"
+    weight = 30
+
+# PaperMod's syntax highlighting
+[markup]
+  [markup.goldmark.renderer]
+    # Allow raw HTML in markdown — also makes [markdown links] in profileMode
+    # subtitle render as actual links instead of being stripped.
+    unsafe = true
+  [markup.highlight]
+    # noClasses=false emits <span class="..."> instead of inline styles,
+    # so we can theme highlights via assets/css/extended/chroma-*.css.
+    noClasses = false
+    codeFences = true
+    guessSyntax = true
+    lineNos = false

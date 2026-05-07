@@ -1,0 +1,17 @@
+/* PaperMod styles the profile-mode hero image as a circle by default.
+   The cat logo is a wide illustration, so render it as-is. */
+.profile_inner img {
+    border-radius: 0;
+}
+
+/* PaperMod's profile subtitle inherits a flat color and no underline,
+   so links inside it look like plain text. Restore link styling. */
+.profile_inner span a {
+    color: var(--primary);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    text-decoration-thickness: 1px;
+}
+.profile_inner span a:hover {
+    color: var(--secondary);
+}
